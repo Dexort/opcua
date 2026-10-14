@@ -1,6 +1,6 @@
 [
     {
-        "id": "1c54a5d6e521d831",
+        "id": "e9e0c09a8861e0f7",
         "type": "tab",
         "label": "Flux 1",
         "disabled": false,
@@ -8,143 +8,1443 @@
         "env": []
     },
     {
-        "id": "4de8e4bbb985b142",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
+        "id": "953eaf751d8189f4",
+        "type": "comment",
+        "z": "e9e0c09a8861e0f7",
+        "name": "Convoyeur — tests",
+        "info": "",
+        "x": 200,
+        "y": 1000,
+        "wires": []
     },
     {
-        "id": "42d9962686b8a276",
-        "type": "ui_group",
-        "name": "TPmSynchrone",
-        "tab": "",
-        "order": 2,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
+        "id": "59478f0a8711d6e8",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "gMarcheConv = true",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1050,
+        "wires": [
+            [
+                "d7c3a43a18446907"
+            ]
+        ]
     },
     {
-        "id": "ab3eef375b1b8e8e",
-        "type": "ui_group",
-        "name": "TPmSTEPPER",
-        "tab": "",
+        "id": "b5ac7ad38b343bdb",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "gMarcheConv = false",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1090,
+        "wires": [
+            [
+                "d7c3a43a18446907"
+            ]
+        ]
+    },
+    {
+        "id": "8991ed874e68870b",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "EnableConvey = true",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1130,
+        "wires": [
+            [
+                "d83e478a23068e95"
+            ]
+        ]
+    },
+    {
+        "id": "bd3636b315d8c152",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "EnableConvey = false",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1170,
+        "wires": [
+            [
+                "d83e478a23068e95"
+            ]
+        ]
+    },
+    {
+        "id": "090602e0dd5b2184",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "SpeedPercent = 25",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "25",
+        "payloadType": "num",
+        "x": 240,
+        "y": 1210,
+        "wires": [
+            [
+                "713b361e18babe13"
+            ]
+        ]
+    },
+    {
+        "id": "034078a4f1a5979b",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "SpeedPercent = 80",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "80",
+        "payloadType": "num",
+        "x": 240,
+        "y": 1250,
+        "wires": [
+            [
+                "713b361e18babe13"
+            ]
+        ]
+    },
+    {
+        "id": "215df1f05475aea9",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "VitesseMMS = 120",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "120",
+        "payloadType": "num",
+        "x": 240,
+        "y": 1290,
+        "wires": [
+            [
+                "1ddb6908f64bb7c6"
+            ]
+        ]
+    },
+    {
+        "id": "1423abf306f44661",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "VitesseMMS = 400",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "400",
+        "payloadType": "num",
+        "x": 240,
+        "y": 1330,
+        "wires": [
+            [
+                "1ddb6908f64bb7c6"
+            ]
+        ]
+    },
+    {
+        "id": "331d844eac9f99ef",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "Simulation CompteurPieces (1 s)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 1370,
+        "wires": [
+            [
+                "92539c56b8b9596d"
+            ]
+        ]
+    },
+    {
+        "id": "92539c56b8b9596d",
+        "type": "function",
+        "z": "e9e0c09a8861e0f7",
+        "name": "Générer CompteurPieces",
+        "func": "let n = context.get('n') || 0;\nif (Math.random() < 0.4) n++;\ncontext.set('n', n);\nmsg.payload = n;\nmsg.topic = 'Pièces';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1370,
+        "wires": [
+            [
+                "84b56550713c09a2"
+            ]
+        ]
+    },
+    {
+        "id": "3b0fbaebd42afce5",
+        "type": "comment",
+        "z": "e9e0c09a8861e0f7",
+        "name": "TPmSynchrone — tests",
+        "info": "",
+        "x": 200,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "b048b178d5a36532",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "BP_Power = true",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1490,
+        "wires": [
+            [
+                "8e6ceb4949184382"
+            ]
+        ]
+    },
+    {
+        "id": "da18fb594ff90620",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "BP_Power = false",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1530,
+        "wires": [
+            [
+                "8e6ceb4949184382"
+            ]
+        ]
+    },
+    {
+        "id": "6927c644d7e6696e",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "ReadyToPowerOn = true",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1570,
+        "wires": [
+            [
+                "a12c3e7417394972"
+            ]
+        ]
+    },
+    {
+        "id": "8aa94b1debe5482f",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "ReadyToPowerOn = false",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1610,
+        "wires": [
+            [
+                "a12c3e7417394972"
+            ]
+        ]
+    },
+    {
+        "id": "6355d52aeb657cc9",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "Velocity (consigne) = 90",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "90",
+        "payloadType": "num",
+        "x": 240,
+        "y": 1650,
+        "wires": [
+            [
+                "7cb93940cadb201d"
+            ]
+        ]
+    },
+    {
+        "id": "ca56595fc5a8fcae",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "Velocity (consigne) = 300",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "300",
+        "payloadType": "num",
+        "x": 240,
+        "y": 1690,
+        "wires": [
+            [
+                "7cb93940cadb201d"
+            ]
+        ]
+    },
+    {
+        "id": "bef29ec6c2d16964",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "Simulation Vitesse moteur (1 s)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 1730,
+        "wires": [
+            [
+                "f9ec8a35ff358a4a"
+            ]
+        ]
+    },
+    {
+        "id": "f9ec8a35ff358a4a",
+        "type": "function",
+        "z": "e9e0c09a8861e0f7",
+        "name": "Générer Vitesse moteur",
+        "func": "const t = Date.now() / 1000;\nmsg.payload = Math.round((150 + 100 * Math.sin(t / 5) + (Math.random() - 0.5) * 8) * 10) / 10;\nmsg.topic = 'Vitesse moteur';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1730,
+        "wires": [
+            [
+                "c88ca955ab611b7a"
+            ]
+        ]
+    },
+    {
+        "id": "cb57f785d087b4be",
+        "type": "comment",
+        "z": "e9e0c09a8861e0f7",
+        "name": "TPmSTEPPER — tests",
+        "info": "",
+        "x": 200,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "8d34680db0785e83",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "BP_Power = true",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1850,
+        "wires": [
+            [
+                "860bd8f3a72c875a"
+            ]
+        ]
+    },
+    {
+        "id": "2d582fac5bfc0447",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "BP_Power = false",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1890,
+        "wires": [
+            [
+                "860bd8f3a72c875a"
+            ]
+        ]
+    },
+    {
+        "id": "00fc052cdc7f4cc2",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "ReadyToPowerOn = true",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1930,
+        "wires": [
+            [
+                "6204060850b04a34"
+            ]
+        ]
+    },
+    {
+        "id": "f5c096c2f1ce8a92",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "ReadyToPowerOn = false",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1970,
+        "wires": [
+            [
+                "6204060850b04a34"
+            ]
+        ]
+    },
+    {
+        "id": "bb7bd6dab51c916d",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "Velocity (consigne) = 60",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "60",
+        "payloadType": "num",
+        "x": 240,
+        "y": 2010,
+        "wires": [
+            [
+                "faa24027dc551a2a"
+            ]
+        ]
+    },
+    {
+        "id": "fbc2d1faa3172aec",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "Velocity (consigne) = 270",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "270",
+        "payloadType": "num",
+        "x": 240,
+        "y": 2050,
+        "wires": [
+            [
+                "faa24027dc551a2a"
+            ]
+        ]
+    },
+    {
+        "id": "94e7b3f7fe3d4f28",
+        "type": "inject",
+        "z": "e9e0c09a8861e0f7",
+        "name": "Simulation Position (1 s)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 2090,
+        "wires": [
+            [
+                "da1a4ea6e459bfc6"
+            ]
+        ]
+    },
+    {
+        "id": "da1a4ea6e459bfc6",
+        "type": "function",
+        "z": "e9e0c09a8861e0f7",
+        "name": "Générer Position",
+        "func": "const t = Date.now() / 1000;\nmsg.payload = Math.round((180 + 170 * Math.sin(t / 8)) * 10) / 10;\nmsg.topic = 'Position';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 2090,
+        "wires": [
+            [
+                "406e22a50ac64c83"
+            ]
+        ]
+    },
+    {
+        "id": "56fed5bf033ec9d4",
+        "type": "ui-template",
+        "z": "e9e0c09a8861e0f7",
+        "group": "111770060baba897",
+        "page": "",
+        "ui": "",
+        "name": "Info Tapis à bande · moteur brushless",
         "order": 1,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
+        "width": 4,
+        "height": 1,
+        "head": "",
+        "format": "<template><div class=\"sv-info\"><span><b>Tapis à bande · moteur brushless</b></span><span class=\"sv-tag\">OPC UA · 10.16.24.155:4840</span></div></template>\n<style>\n.sv-info{display:flex;justify-content:space-between;align-items:center;width:100%;font-size:13px;color:rgba(var(--v-theme-on-surface),.65)}\n.sv-info b{color:rgb(var(--v-theme-on-surface));font-weight:600}\n.sv-tag{font-family:monospace;font-size:12px;padding:2px 8px;border-radius:6px;background:rgba(var(--v-theme-on-surface),.07)}\n.sv-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:100%;height:100%;padding:6px 0}\n.sv-label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:rgba(var(--v-theme-on-surface),.6);font-weight:600;text-align:center}\n.sv-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.03em}\n.sv-pill.on{background:rgba(30,158,90,.14);color:#1e9e5a}\n.sv-pill.off{background:rgba(214,69,69,.14);color:#d64545}\n.sv-pill.na{background:rgba(120,120,120,.14);color:#8a8a8a}\n.sv-dot{width:10px;height:10px;border-radius:50%;background:currentColor}\n.sv-pill.on .sv-dot{box-shadow:0 0 0 4px rgba(30,158,90,.25)}\n.sv-var{font-family:monospace;font-size:11px;color:rgba(var(--v-theme-on-surface),.45)}\n.sv-convoyeur{border-top:4px solid #f08a00 !important}.sv-synchrone{border-top:4px solid #0b5cad !important}.sv-stepper{border-top:4px solid #7a4bd1 !important}</style>",
+        "storeOutMessages": false,
+        "passthru": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 990,
+        "y": 1160,
+        "wires": [
+            []
+        ]
     },
     {
-        "id": "1093b89fdc091d83",
-        "type": "ui_group",
-        "name": "Convoyeur",
-        "tab": "",
+        "id": "d7c3a43a18446907",
+        "type": "ui-template",
+        "z": "e9e0c09a8861e0f7",
+        "group": "111770060baba897",
+        "page": "",
+        "ui": "",
+        "name": "Mise sous tension",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "head": "",
+        "format": "<template><div class=\"sv-badge\"><div class=\"sv-label\">Mise sous tension</div>\n<div :class=\"['sv-pill', known ? (isOn ? 'on' : 'off') : 'na']\"><span class=\"sv-dot\"></span>{{ known ? (isOn ? 'ALIMENTÉ' : 'HORS TENSION') : 'EN ATTENTE' }}</div>\n<div class=\"sv-var\">gMarcheConv</div></div></template>\n<script>\nexport default {\n  computed: {\n    known() { return !!this.msg && this.msg.payload !== undefined },\n    isOn() { const p = this.msg && this.msg.payload; return p === true || p === 1 || p === '1' || String(p).toLowerCase() === 'true' || String(p).toUpperCase() === 'ON' }\n  }\n}\n</script>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 930,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d83e478a23068e95",
+        "type": "ui-template",
+        "z": "e9e0c09a8861e0f7",
+        "group": "111770060baba897",
+        "page": "",
+        "ui": "",
+        "name": "Mouvement du tapis",
         "order": 3,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
+        "width": 2,
+        "height": 2,
+        "head": "",
+        "format": "<template><div class=\"sv-badge\"><div class=\"sv-label\">Mouvement du tapis</div>\n<div :class=\"['sv-pill', known ? (isOn ? 'on' : 'off') : 'na']\"><span class=\"sv-dot\"></span>{{ known ? (isOn ? 'EN MOUVEMENT' : 'ARRÊTÉ') : 'EN ATTENTE' }}</div>\n<div class=\"sv-var\">EnableConvey</div></div></template>\n<script>\nexport default {\n  computed: {\n    known() { return !!this.msg && this.msg.payload !== undefined },\n    isOn() { const p = this.msg && this.msg.payload; return p === true || p === 1 || p === '1' || String(p).toLowerCase() === 'true' || String(p).toUpperCase() === 'ON' }\n  }\n}\n</script>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 940,
+        "y": 1240,
+        "wires": [
+            []
+        ]
     },
     {
-        "id": "fa20684cce7dae27",
-        "type": "ui_group",
-        "name": "Group 4",
-        "tab": "",
+        "id": "713b361e18babe13",
+        "type": "ui-gauge",
+        "z": "e9e0c09a8861e0f7",
+        "name": "Vitesse de consigne",
+        "group": "111770060baba897",
         "order": 4,
-        "disp": true,
-        "width": 6
+        "value": "payload",
+        "valueType": "msg",
+        "width": 2,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Vitesse de consigne",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#1e9e5a",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#f0a500",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "85",
+                "color": "#d64545",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 100,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 940,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ddb6908f64bb7c6",
+        "type": "ui-gauge",
+        "z": "e9e0c09a8861e0f7",
+        "name": "Vitesse du tapis",
+        "group": "111770060baba897",
+        "order": 5,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 2,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Vitesse du tapis",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "mm/s",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#1e9e5a",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "300",
+                "color": "#f0a500",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "425",
+                "color": "#d64545",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 500,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 920,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "84b56550713c09a2",
+        "type": "ui-chart",
+        "z": "e9e0c09a8861e0f7",
+        "group": "111770060baba897",
+        "name": "Nombre de pièces",
+        "label": "Nombre de pièces",
+        "order": 6,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "pièces",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "false",
+        "pointRadius": 0,
+        "showLegend": false,
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 4,
+        "height": 6,
+        "className": "",
+        "interpolation": "monotoneX",
+        "x": 930,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c5f90528ab81563",
+        "type": "ui-template",
+        "z": "e9e0c09a8861e0f7",
+        "group": "5279f0cb60ea2737",
+        "page": "",
+        "ui": "",
+        "name": "Info Moteur synchrone · axe transtocker",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "head": "",
+        "format": "<template><div class=\"sv-info\"><span><b>Moteur synchrone · axe transtocker</b></span><span class=\"sv-tag\">OPC UA · 10.16.7.11:4840</span></div></template>\n<style>\n.sv-info{display:flex;justify-content:space-between;align-items:center;width:100%;font-size:13px;color:rgba(var(--v-theme-on-surface),.65)}\n.sv-info b{color:rgb(var(--v-theme-on-surface));font-weight:600}\n.sv-tag{font-family:monospace;font-size:12px;padding:2px 8px;border-radius:6px;background:rgba(var(--v-theme-on-surface),.07)}\n.sv-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:100%;height:100%;padding:6px 0}\n.sv-label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:rgba(var(--v-theme-on-surface),.6);font-weight:600;text-align:center}\n.sv-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.03em}\n.sv-pill.on{background:rgba(30,158,90,.14);color:#1e9e5a}\n.sv-pill.off{background:rgba(214,69,69,.14);color:#d64545}\n.sv-pill.na{background:rgba(120,120,120,.14);color:#8a8a8a}\n.sv-dot{width:10px;height:10px;border-radius:50%;background:currentColor}\n.sv-pill.on .sv-dot{box-shadow:0 0 0 4px rgba(30,158,90,.25)}\n.sv-var{font-family:monospace;font-size:11px;color:rgba(var(--v-theme-on-surface),.45)}\n</style>",
+        "storeOutMessages": false,
+        "passthru": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1000,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e6ceb4949184382",
+        "type": "ui-template",
+        "z": "e9e0c09a8861e0f7",
+        "group": "5279f0cb60ea2737",
+        "page": "",
+        "ui": "",
+        "name": "Mise sous tension",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "head": "",
+        "format": "<template><div class=\"sv-badge\"><div class=\"sv-label\">Mise sous tension</div>\n<div :class=\"['sv-pill', known ? (isOn ? 'on' : 'off') : 'na']\"><span class=\"sv-dot\"></span>{{ known ? (isOn ? 'ALIMENTÉ' : 'HORS TENSION') : 'EN ATTENTE' }}</div>\n<div class=\"sv-var\">BP_Power</div></div></template>\n<script>\nexport default {\n  computed: {\n    known() { return !!this.msg && this.msg.payload !== undefined },\n    isOn() { const p = this.msg && this.msg.payload; return p === true || p === 1 || p === '1' || String(p).toLowerCase() === 'true' || String(p).toUpperCase() === 'ON' }\n  }\n}\n</script>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 930,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a12c3e7417394972",
+        "type": "ui-template",
+        "z": "e9e0c09a8861e0f7",
+        "group": "5279f0cb60ea2737",
+        "page": "",
+        "ui": "",
+        "name": "État des modules",
+        "order": 3,
+        "width": 2,
+        "height": 2,
+        "head": "",
+        "format": "<template><div class=\"sv-badge\"><div class=\"sv-label\">État des modules</div>\n<div :class=\"['sv-pill', known ? (isOn ? 'on' : 'off') : 'na']\"><span class=\"sv-dot\"></span>{{ known ? (isOn ? 'PRÊT' : 'NON PRÊT') : 'EN ATTENTE' }}</div>\n<div class=\"sv-var\">ReadyToPowerOn</div></div></template>\n<script>\nexport default {\n  computed: {\n    known() { return !!this.msg && this.msg.payload !== undefined },\n    isOn() { const p = this.msg && this.msg.payload; return p === true || p === 1 || p === '1' || String(p).toLowerCase() === 'true' || String(p).toUpperCase() === 'ON' }\n  }\n}\n</script>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 930,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7cb93940cadb201d",
+        "type": "ui-gauge",
+        "z": "e9e0c09a8861e0f7",
+        "name": "Vitesse de consigne",
+        "group": "5279f0cb60ea2737",
+        "order": 4,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 4,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Vitesse de consigne",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "°/s",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#1e9e5a",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "240",
+                "color": "#f0a500",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "320",
+                "color": "#d64545",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 360,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 940,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c88ca955ab611b7a",
+        "type": "ui-chart",
+        "z": "e9e0c09a8861e0f7",
+        "group": "5279f0cb60ea2737",
+        "name": "Vitesse du moteur",
+        "label": "Vitesse du moteur",
+        "order": 5,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "°/s",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "false",
+        "pointRadius": 0,
+        "showLegend": false,
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 4,
+        "height": 6,
+        "className": "",
+        "interpolation": "monotoneX",
+        "x": 930,
+        "y": 1800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1c75c664f8c7868a",
+        "type": "ui-template",
+        "z": "e9e0c09a8861e0f7",
+        "group": "df07c9cb216ca3ee",
+        "page": "",
+        "ui": "",
+        "name": "Info Moteur pas à pas · guide de tri",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "head": "",
+        "format": "<template><div class=\"sv-info\"><span><b>Moteur pas à pas · guide de tri</b></span><span class=\"sv-tag\">OPC UA · 10.16.7.13:4840</span></div></template>\n<style>\n.sv-info{display:flex;justify-content:space-between;align-items:center;width:100%;font-size:13px;color:rgba(var(--v-theme-on-surface),.65)}\n.sv-info b{color:rgb(var(--v-theme-on-surface));font-weight:600}\n.sv-tag{font-family:monospace;font-size:12px;padding:2px 8px;border-radius:6px;background:rgba(var(--v-theme-on-surface),.07)}\n.sv-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:100%;height:100%;padding:6px 0}\n.sv-label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:rgba(var(--v-theme-on-surface),.6);font-weight:600;text-align:center}\n.sv-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.03em}\n.sv-pill.on{background:rgba(30,158,90,.14);color:#1e9e5a}\n.sv-pill.off{background:rgba(214,69,69,.14);color:#d64545}\n.sv-pill.na{background:rgba(120,120,120,.14);color:#8a8a8a}\n.sv-dot{width:10px;height:10px;border-radius:50%;background:currentColor}\n.sv-pill.on .sv-dot{box-shadow:0 0 0 4px rgba(30,158,90,.25)}\n.sv-var{font-family:monospace;font-size:11px;color:rgba(var(--v-theme-on-surface),.45)}\n</style>",
+        "storeOutMessages": false,
+        "passthru": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 980,
+        "y": 1840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "860bd8f3a72c875a",
+        "type": "ui-template",
+        "z": "e9e0c09a8861e0f7",
+        "group": "df07c9cb216ca3ee",
+        "page": "",
+        "ui": "",
+        "name": "Mise sous tension",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "head": "",
+        "format": "<template><div class=\"sv-badge\"><div class=\"sv-label\">Mise sous tension</div>\n<div :class=\"['sv-pill', known ? (isOn ? 'on' : 'off') : 'na']\"><span class=\"sv-dot\"></span>{{ known ? (isOn ? 'ALIMENTÉ' : 'HORS TENSION') : 'EN ATTENTE' }}</div>\n<div class=\"sv-var\">BP_Power</div></div></template>\n<script>\nexport default {\n  computed: {\n    known() { return !!this.msg && this.msg.payload !== undefined },\n    isOn() { const p = this.msg && this.msg.payload; return p === true || p === 1 || p === '1' || String(p).toLowerCase() === 'true' || String(p).toUpperCase() === 'ON' }\n  }\n}\n</script>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 930,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6204060850b04a34",
+        "type": "ui-template",
+        "z": "e9e0c09a8861e0f7",
+        "group": "df07c9cb216ca3ee",
+        "page": "",
+        "ui": "",
+        "name": "État des modules",
+        "order": 3,
+        "width": 2,
+        "height": 2,
+        "head": "",
+        "format": "<template><div class=\"sv-badge\"><div class=\"sv-label\">État des modules</div>\n<div :class=\"['sv-pill', known ? (isOn ? 'on' : 'off') : 'na']\"><span class=\"sv-dot\"></span>{{ known ? (isOn ? 'PRÊT' : 'NON PRÊT') : 'EN ATTENTE' }}</div>\n<div class=\"sv-var\">ReadyToPowerOn</div></div></template>\n<script>\nexport default {\n  computed: {\n    known() { return !!this.msg && this.msg.payload !== undefined },\n    isOn() { const p = this.msg && this.msg.payload; return p === true || p === 1 || p === '1' || String(p).toLowerCase() === 'true' || String(p).toUpperCase() === 'ON' }\n  }\n}\n</script>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 930,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "faa24027dc551a2a",
+        "type": "ui-gauge",
+        "z": "e9e0c09a8861e0f7",
+        "name": "Vitesse de consigne",
+        "group": "df07c9cb216ca3ee",
+        "order": 4,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 4,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Vitesse de consigne",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "°/s",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#1e9e5a",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "240",
+                "color": "#f0a500",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "320",
+                "color": "#d64545",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 360,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 940,
+        "y": 1960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "406e22a50ac64c83",
+        "type": "ui-chart",
+        "z": "e9e0c09a8861e0f7",
+        "group": "df07c9cb216ca3ee",
+        "name": "Position du moteur",
+        "label": "Position du moteur",
+        "order": 5,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "°",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "false",
+        "pointRadius": 0,
+        "showLegend": false,
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 4,
+        "height": 6,
+        "className": "",
+        "interpolation": "monotoneX",
+        "x": 930,
+        "y": 2000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "111770060baba897",
+        "type": "ui-group",
+        "name": "Convoyeur",
+        "page": "f43e8b7d2050f865",
+        "width": 4,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "sv-card sv-convoyeur",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "5279f0cb60ea2737",
+        "type": "ui-group",
+        "name": "TPmSynchrone",
+        "page": "f43e8b7d2050f865",
+        "width": 4,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "sv-card sv-synchrone",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "df07c9cb216ca3ee",
+        "type": "ui-group",
+        "name": "TPmSTEPPER",
+        "page": "f43e8b7d2050f865",
+        "width": 4,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "sv-card sv-stepper",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "f43e8b7d2050f865",
+        "type": "ui-page",
+        "name": "Vue d'ensemble",
+        "ui": "fcbbe4d2b98a8a2a",
+        "path": "/overview",
+        "icon": "mdi-view-dashboard",
+        "layout": "grid",
+        "theme": "f85ed359fb4405f5",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "4"
+            },
+            {
+                "name": "Tablet",
+                "px": "768",
+                "cols": "8"
+            },
+            {
+                "name": "Desktop",
+                "px": "1200",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
     },
     {
         "id": "fcbbe4d2b98a8a2a",
@@ -167,818 +1467,29 @@
         "allowInstall": false
     },
     {
-        "id": "131ae5329f24999e",
+        "id": "f85ed359fb4405f5",
         "type": "ui-theme",
-        "name": "Default Theme",
+        "name": "Theme Supervision Pro",
         "colors": {
-            "surface": "#fcfcfd",
-            "primary": "#0d74ce",
-            "bgPage": "#f9f9fb",
+            "surface": "#ffffff",
+            "primary": "#0b5cad",
+            "bgPage": "#eef1f6",
             "groupBg": "#ffffff",
-            "groupOutline": "#d9d9e0"
+            "groupOutline": "#d5dbe5"
         },
         "sizes": {
             "density": "default",
-            "pagePadding": "12px",
-            "groupGap": "12px",
-            "groupBorderRadius": "4px",
+            "pagePadding": "16px",
+            "groupGap": "16px",
+            "groupBorderRadius": "10px",
             "widgetGap": "12px"
         }
     },
     {
-        "id": "2f1c18ee9b67ac74",
-        "type": "ui-page",
-        "name": "Supervision",
-        "ui": "fcbbe4d2b98a8a2a",
-        "path": "/page1",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "131ae5329f24999e",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "tabs": [],
-        "order": 1,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "e03a2d602f0f8c41",
-        "type": "ui-group",
-        "name": "TPmSTEPPER",
-        "page": "2f1c18ee9b67ac74",
-        "width": 6,
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": true,
-        "disabled": false,
-        "groupType": "default",
-        "tab": ""
-    },
-    {
-        "id": "1effcbbfcaa60440",
-        "type": "ui_group",
-        "name": "TPmSTEPPER",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "be58a61971d6dfac",
-        "type": "ui_group",
-        "name": "TPmSynchrone",
-        "tab": "",
-        "order": 2,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "58430282aef59dd9",
-        "type": "ui_group",
-        "name": "Convoyeur",
-        "tab": "",
-        "order": 3,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "322cc75b9cd6c8ff",
-        "type": "ui-group",
-        "name": "TPmSynchrone",
-        "page": "2f1c18ee9b67ac74",
-        "width": 6,
-        "height": 1,
-        "order": 2,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default",
-        "tab": ""
-    },
-    {
-        "id": "04fb996f79ed94cf",
-        "type": "ui-group",
-        "name": "Convoyeur",
-        "page": "2f1c18ee9b67ac74",
-        "width": 6,
-        "height": 1,
-        "order": 3,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default",
-        "tab": ""
-    },
-    {
-        "id": "8b691ba31b4a23b4",
-        "type": "ui-spacer",
-        "group": "e03a2d602f0f8c41",
-        "name": "spacer",
-        "tooltip": "",
-        "order": 1,
-        "width": 1,
-        "height": 1,
-        "className": ""
-    },
-    {
-        "id": "d3d90ce879b12c72",
-        "type": "ui-gauge",
-        "z": "1c54a5d6e521d831",
-        "name": "Vitesse consigne",
-        "group": "e03a2d602f0f8c41",
-        "order": 4,
-        "value": "payload",
-        "valueType": "msg",
-        "width": 3,
-        "height": 3,
-        "gtype": "gauge-half",
-        "gstyle": "needle",
-        "title": "Vitesse consigne",
-        "alwaysShowTitle": false,
-        "floatingTitlePosition": "top-left",
-        "units": "degrés/sec",
-        "icon": "",
-        "prefix": "",
-        "suffix": "",
-        "segments": [
-            {
-                "from": "0",
-                "color": "#5cd65c",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "4",
-                "color": "#ffc800",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "7",
-                "color": "#ea5353",
-                "text": "",
-                "textType": "label"
-            }
-        ],
-        "min": 0,
-        "max": 10,
-        "sizeThickness": 16,
-        "sizeGap": 4,
-        "sizeKeyThickness": 8,
-        "styleRounded": true,
-        "styleGlow": false,
-        "className": "",
-        "x": 410,
-        "y": 160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "290b5c76c4f67e8e",
-        "type": "ui-chart",
-        "z": "1c54a5d6e521d831",
-        "group": "e03a2d602f0f8c41",
-        "name": "Position du moteur ",
-        "label": "Position du moteur",
-        "order": 5,
-        "chartType": "line",
-        "category": "topic",
-        "categoryType": "msg",
-        "xAxisLabel": "",
-        "xAxisProperty": "",
-        "xAxisPropertyType": "timestamp",
-        "xAxisType": "time",
-        "xAxisFormat": "",
-        "xAxisFormatType": "auto",
-        "xmin": "",
-        "xmax": "",
-        "yAxisLabel": "",
-        "yAxisProperty": "payload",
-        "yAxisPropertyType": "msg",
-        "ymin": "",
-        "ymax": "",
-        "bins": 10,
-        "action": "append",
-        "stackSeries": false,
-        "pointShape": "circle",
-        "pointRadius": 4,
-        "showLegend": true,
-        "removeOlder": "10",
-        "removeOlderUnit": "60",
-        "removeOlderPoints": "",
-        "colors": [
-            "#0095ff",
-            "#ff0000",
-            "#ff7f0e",
-            "#2ca02c",
-            "#a347e1",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "textColor": [
-            "#666666"
-        ],
-        "textColorDefault": true,
-        "gridColor": [
-            "#e5e5e5"
-        ],
-        "gridColorDefault": true,
-        "width": 6,
-        "height": 8,
-        "className": "",
-        "interpolation": "linear",
-        "x": 410,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4023fba570f60bb9",
-        "type": "ui-text",
-        "z": "1c54a5d6e521d831",
-        "group": "e03a2d602f0f8c41",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "Mise sous tension ",
-        "label": "Mise sous tension ",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": true,
-        "className": "",
-        "value": "payload",
-        "valueType": "msg",
-        "x": 410,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "fd05475fbd5936ba",
-        "type": "ui-text",
-        "z": "1c54a5d6e521d831",
-        "group": "e03a2d602f0f8c41",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "État des modules",
-        "label": "État des modules",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "OFF",
-        "valueType": "str",
-        "x": 410,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "eaf2dc233b15b90d",
-        "type": "ui-gauge",
-        "z": "1c54a5d6e521d831",
-        "name": "Vitesse consigne",
-        "group": "322cc75b9cd6c8ff",
-        "order": 2,
-        "value": "payload",
-        "valueType": "msg",
-        "width": 3,
-        "height": 3,
-        "gtype": "gauge-half",
-        "gstyle": "needle",
-        "title": "Vitesse consigne",
-        "alwaysShowTitle": false,
-        "floatingTitlePosition": "top-left",
-        "units": "degrés/sec",
-        "icon": "",
-        "prefix": "",
-        "suffix": "",
-        "segments": [
-            {
-                "from": "0",
-                "color": "#5cd65c",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "4",
-                "color": "#ffc800",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "7",
-                "color": "#ea5353",
-                "text": "",
-                "textType": "label"
-            }
-        ],
-        "min": 0,
-        "max": 10,
-        "sizeThickness": 16,
-        "sizeGap": 4,
-        "sizeKeyThickness": 8,
-        "styleRounded": true,
-        "styleGlow": false,
-        "className": "",
-        "x": 410,
-        "y": 420,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d9e62601a77cdfc0",
-        "type": "ui-chart",
-        "z": "1c54a5d6e521d831",
-        "group": "322cc75b9cd6c8ff",
-        "name": "Vitesse du moteur",
-        "label": "Vitesse du moteur",
-        "order": 3,
-        "chartType": "line",
-        "category": "topic",
-        "categoryType": "msg",
-        "xAxisLabel": "",
-        "xAxisProperty": "",
-        "xAxisPropertyType": "timestamp",
-        "xAxisType": "time",
-        "xAxisFormat": "",
-        "xAxisFormatType": "auto",
-        "xmin": "",
-        "xmax": "",
-        "yAxisLabel": "",
-        "yAxisProperty": "payload",
-        "yAxisPropertyType": "msg",
-        "ymin": "",
-        "ymax": "",
-        "bins": 10,
-        "action": "append",
-        "stackSeries": false,
-        "pointShape": "circle",
-        "pointRadius": 4,
-        "showLegend": true,
-        "removeOlder": 1,
-        "removeOlderUnit": "3600",
-        "removeOlderPoints": "",
-        "colors": [
-            "#0095ff",
-            "#ff0000",
-            "#ff7f0e",
-            "#2ca02c",
-            "#a347e1",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "textColor": [
-            "#666666"
-        ],
-        "textColorDefault": true,
-        "gridColor": [
-            "#e5e5e5"
-        ],
-        "gridColorDefault": true,
-        "width": 6,
-        "height": 8,
-        "className": "",
-        "interpolation": "linear",
-        "x": 410,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9076b46d57686227",
-        "type": "ui-text",
-        "z": "1c54a5d6e521d831",
-        "group": "322cc75b9cd6c8ff",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Mise sous tension ",
-        "label": "Mise sous tension ",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "payload",
-        "valueType": "str",
-        "x": 410,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "882a85ea27833ddb",
-        "type": "ui-text",
-        "z": "1c54a5d6e521d831",
-        "group": "322cc75b9cd6c8ff",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "État des modules",
-        "label": "État des modules",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "payload",
-        "valueType": "str",
-        "x": 410,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "82f7f7b092522398",
-        "type": "ui-gauge",
-        "z": "1c54a5d6e521d831",
-        "name": "Vitesse consigne",
-        "group": "04fb996f79ed94cf",
-        "order": 4,
-        "value": "payload",
-        "valueType": "msg",
-        "width": 3,
-        "height": 3,
-        "gtype": "gauge-half",
-        "gstyle": "needle",
-        "title": "Vitesse consigne",
-        "alwaysShowTitle": false,
-        "floatingTitlePosition": "top-left",
-        "units": "%",
-        "icon": "",
-        "prefix": "",
-        "suffix": "",
-        "segments": [
-            {
-                "from": "0",
-                "color": "#5cd65c",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "4",
-                "color": "#ffc800",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "7",
-                "color": "#ea5353",
-                "text": "",
-                "textType": "label"
-            }
-        ],
-        "min": 0,
-        "max": 10,
-        "sizeThickness": 16,
-        "sizeGap": 4,
-        "sizeKeyThickness": 8,
-        "styleRounded": true,
-        "styleGlow": false,
-        "className": "",
-        "x": 410,
-        "y": 640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "862fb0c07450e01d",
-        "type": "ui-chart",
-        "z": "1c54a5d6e521d831",
-        "group": "04fb996f79ed94cf",
-        "name": "Nombre de pièces ",
-        "label": "Nombre de pièces ",
-        "order": 2,
-        "chartType": "line",
-        "category": "topic",
-        "categoryType": "msg",
-        "xAxisLabel": "",
-        "xAxisProperty": "",
-        "xAxisPropertyType": "timestamp",
-        "xAxisType": "time",
-        "xAxisFormat": "",
-        "xAxisFormatType": "auto",
-        "xmin": "",
-        "xmax": "",
-        "yAxisLabel": "",
-        "yAxisProperty": "payload",
-        "yAxisPropertyType": "msg",
-        "ymin": "",
-        "ymax": "",
-        "bins": 10,
-        "action": "append",
-        "stackSeries": false,
-        "pointShape": "circle",
-        "pointRadius": 4,
-        "showLegend": true,
-        "removeOlder": 1,
-        "removeOlderUnit": "3600",
-        "removeOlderPoints": "",
-        "colors": [
-            "#0095ff",
-            "#ff0000",
-            "#ff7f0e",
-            "#2ca02c",
-            "#a347e1",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "textColor": [
-            "#666666"
-        ],
-        "textColorDefault": true,
-        "gridColor": [
-            "#e5e5e5"
-        ],
-        "gridColorDefault": true,
-        "width": 6,
-        "height": 8,
-        "className": "",
-        "interpolation": "linear",
-        "x": 410,
-        "y": 720,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "72d2ab106fe6b04d",
-        "type": "ui-text",
-        "z": "1c54a5d6e521d831",
-        "group": "04fb996f79ed94cf",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Mise sous tension ",
-        "label": "Mise sous tension ",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "payload",
-        "valueType": "str",
-        "x": 410,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "efa9e2224464964b",
-        "type": "ui-text",
-        "z": "1c54a5d6e521d831",
-        "group": "04fb996f79ed94cf",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "Mouvement du  tapis ",
-        "label": "Mouvement du  tapis ",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "payload",
-        "valueType": "str",
-        "x": 420,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "ab6f4f4e4e7e2677",
-        "type": "ui-gauge",
-        "z": "1c54a5d6e521d831",
-        "name": "Vitesse du tapis",
-        "group": "04fb996f79ed94cf",
-        "order": 5,
-        "value": "payload",
-        "valueType": "msg",
-        "width": 3,
-        "height": 3,
-        "gtype": "gauge-half",
-        "gstyle": "needle",
-        "title": "Vitesse du tapis",
-        "alwaysShowTitle": false,
-        "floatingTitlePosition": "top-left",
-        "units": "mm/s",
-        "icon": "",
-        "prefix": "",
-        "suffix": "",
-        "segments": [
-            {
-                "from": "0",
-                "color": "#5cd65c",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "4",
-                "color": "#ffc800",
-                "text": "",
-                "textType": "label"
-            },
-            {
-                "from": "7",
-                "color": "#ea5353",
-                "text": "",
-                "textType": "label"
-            }
-        ],
-        "min": 0,
-        "max": 10,
-        "sizeThickness": 16,
-        "sizeGap": 4,
-        "sizeKeyThickness": 8,
-        "styleRounded": true,
-        "styleGlow": false,
-        "className": "",
-        "x": 400,
-        "y": 680,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "cc261c5f22654566",
-        "type": "inject",
-        "z": "1c54a5d6e521d831",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "5",
-        "payloadType": "num",
-        "x": 230,
-        "y": 160,
-        "wires": [
-            [
-                "d3d90ce879b12c72"
-            ]
-        ]
-    },
-    {
-        "id": "16210b6c22d825d2",
-        "type": "inject",
-        "z": "1c54a5d6e521d831",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "ON",
-        "payloadType": "str",
-        "x": 230,
-        "y": 80,
-        "wires": [
-            [
-                "4023fba570f60bb9"
-            ]
-        ]
-    },
-    {
-        "id": "66da9b22be5b8f4e",
-        "type": "inject",
-        "z": "1c54a5d6e521d831",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "OFF",
-        "payloadType": "str",
-        "x": 230,
-        "y": 120,
-        "wires": [
-            [
-                "fd05475fbd5936ba"
-            ]
-        ]
-    },
-    {
-        "id": "4d70783cefa6465b",
-        "type": "inject",
-        "z": "1c54a5d6e521d831",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "5",
-        "payloadType": "num",
-        "x": 230,
-        "y": 200,
-        "wires": [
-            [
-                "290b5c76c4f67e8e"
-            ]
-        ]
-    },
-    {
-        "id": "7c1dd6f78a964b51",
+        "id": "46a64f5d5f85854e",
         "type": "global-config",
         "env": [],
         "modules": {
-            "node-red-dashboard": "3.6.6",
             "@flowfuse/node-red-dashboard": "1.33.0"
         }
     }
