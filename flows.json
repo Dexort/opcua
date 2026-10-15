@@ -1,5 +1,1340 @@
 [
     {
+        "id": "2849d2c1ad85dd3d",
+        "type": "tab",
+        "label": "Flux 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "10375906289d1dcb",
+        "type": "comment",
+        "z": "2849d2c1ad85dd3d",
+        "name": "Convoyeur — SIMULATION (désactivée)",
+        "info": "",
+        "x": 200,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "1efca55860949c3a",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "gMarcheConv = true",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1150,
+        "wires": [
+            [
+                "801d67df9dd7d206"
+            ]
+        ]
+    },
+    {
+        "id": "59a81a71253bd524",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "gMarcheConv = false",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1190,
+        "wires": [
+            [
+                "801d67df9dd7d206"
+            ]
+        ]
+    },
+    {
+        "id": "a0f9c9f7272b815f",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "EnableConvey = true",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1230,
+        "wires": [
+            [
+                "ead4a5927d5db8db"
+            ]
+        ]
+    },
+    {
+        "id": "98ccf655846b5044",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "EnableConvey = false",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1270,
+        "wires": [
+            [
+                "ead4a5927d5db8db"
+            ]
+        ]
+    },
+    {
+        "id": "baf0bac4899c841c",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "SpeedPercent = 25",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "25",
+        "payloadType": "num",
+        "x": 240,
+        "y": 1310,
+        "wires": [
+            [
+                "813ed60bc8068d58"
+            ]
+        ]
+    },
+    {
+        "id": "b10bfefb9d4b6d81",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "SpeedPercent = 80",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "80",
+        "payloadType": "num",
+        "x": 240,
+        "y": 1350,
+        "wires": [
+            [
+                "813ed60bc8068d58"
+            ]
+        ]
+    },
+    {
+        "id": "970eb60989b8fef7",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "VitesseMMS = 120",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "120",
+        "payloadType": "num",
+        "x": 240,
+        "y": 1390,
+        "wires": [
+            [
+                "1ec75cbacef21bc6"
+            ]
+        ]
+    },
+    {
+        "id": "3d52073cffe38378",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "VitesseMMS = 400",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "400",
+        "payloadType": "num",
+        "x": 240,
+        "y": 1430,
+        "wires": [
+            [
+                "1ec75cbacef21bc6"
+            ]
+        ]
+    },
+    {
+        "id": "7ce5c088b4a562ca",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "Simulation CompteurPieces (1 s)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 1470,
+        "wires": [
+            [
+                "eeb0bc6eb87ab37e"
+            ]
+        ]
+    },
+    {
+        "id": "eeb0bc6eb87ab37e",
+        "type": "function",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "Générer CompteurPieces",
+        "func": "let n = context.get('n') || 0;\nif (Math.random() < 0.4) n++;\ncontext.set('n', n);\nmsg.payload = n;\nmsg.topic = 'Pièces';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1470,
+        "wires": [
+            [
+                "2b32f14a1d80d7a9"
+            ]
+        ]
+    },
+    {
+        "id": "1081ea504d028e97",
+        "type": "comment",
+        "z": "2849d2c1ad85dd3d",
+        "name": "TPmSynchrone — SIMULATION (désactivée)",
+        "info": "",
+        "x": 200,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "2e5e7efe4c08f3a2",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "BP_Power = true",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1590,
+        "wires": [
+            [
+                "d6f52ae3955ad3d5"
+            ]
+        ]
+    },
+    {
+        "id": "4049d340cda5e5d8",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "BP_Power = false",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1630,
+        "wires": [
+            [
+                "d6f52ae3955ad3d5"
+            ]
+        ]
+    },
+    {
+        "id": "40054efb363758ac",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "ReadyToPowerOn = true",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1670,
+        "wires": [
+            [
+                "e9081964678c2f03"
+            ]
+        ]
+    },
+    {
+        "id": "df474547dd5f2577",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "ReadyToPowerOn = false",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1710,
+        "wires": [
+            [
+                "e9081964678c2f03"
+            ]
+        ]
+    },
+    {
+        "id": "da99fb237dc57d35",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "Velocity (consigne) = 90",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "90",
+        "payloadType": "num",
+        "x": 240,
+        "y": 1750,
+        "wires": [
+            [
+                "05dabead7f34ec12"
+            ]
+        ]
+    },
+    {
+        "id": "c775fddd33b03dbd",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "Velocity (consigne) = 300",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "300",
+        "payloadType": "num",
+        "x": 240,
+        "y": 1790,
+        "wires": [
+            [
+                "05dabead7f34ec12"
+            ]
+        ]
+    },
+    {
+        "id": "be5b32844a4fdd42",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "Simulation Vitesse moteur (1 s)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 1830,
+        "wires": [
+            [
+                "9ba1c19e122e200d"
+            ]
+        ]
+    },
+    {
+        "id": "9ba1c19e122e200d",
+        "type": "function",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "Générer Vitesse moteur",
+        "func": "const t = Date.now() / 1000;\nmsg.payload = Math.round((150 + 100 * Math.sin(t / 5) + (Math.random() - 0.5) * 8) * 10) / 10;\nmsg.topic = 'Vitesse moteur';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1830,
+        "wires": [
+            [
+                "b89e00c7cd3281a2"
+            ]
+        ]
+    },
+    {
+        "id": "c27d23b8cbb1f0dc",
+        "type": "comment",
+        "z": "2849d2c1ad85dd3d",
+        "name": "TPmSTEPPER — SIMULATION (désactivée)",
+        "info": "",
+        "x": 200,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "74b19c371e369618",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "BP_Power = true",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1950,
+        "wires": [
+            [
+                "477d9af3855effc7"
+            ]
+        ]
+    },
+    {
+        "id": "2b2e3a4015e42b8d",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "BP_Power = false",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 1990,
+        "wires": [
+            [
+                "477d9af3855effc7"
+            ]
+        ]
+    },
+    {
+        "id": "1a0a2723141f9584",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "ReadyToPowerOn = true",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 2030,
+        "wires": [
+            [
+                "c4cc37e198e3ad20"
+            ]
+        ]
+    },
+    {
+        "id": "7604b01ebbd35cdc",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "ReadyToPowerOn = false",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 2070,
+        "wires": [
+            [
+                "c4cc37e198e3ad20"
+            ]
+        ]
+    },
+    {
+        "id": "344d109e1ef0c570",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "Velocity (consigne) = 60",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "60",
+        "payloadType": "num",
+        "x": 240,
+        "y": 2110,
+        "wires": [
+            [
+                "0229b4532f655040"
+            ]
+        ]
+    },
+    {
+        "id": "a8189096e06fe91a",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "Velocity (consigne) = 270",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "270",
+        "payloadType": "num",
+        "x": 240,
+        "y": 2150,
+        "wires": [
+            [
+                "0229b4532f655040"
+            ]
+        ]
+    },
+    {
+        "id": "fa4e21b879acb8f3",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "Simulation Position (1 s)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 2190,
+        "wires": [
+            [
+                "fb8938aa7ebc91d8"
+            ]
+        ]
+    },
+    {
+        "id": "fb8938aa7ebc91d8",
+        "type": "function",
+        "z": "2849d2c1ad85dd3d",
+        "d": true,
+        "name": "Générer Position",
+        "func": "const t = Date.now() / 1000;\nmsg.payload = Math.round((180 + 170 * Math.sin(t / 8)) * 10) / 10;\nmsg.topic = 'Position';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 2190,
+        "wires": [
+            [
+                "5548fefb14a2fb31"
+            ]
+        ]
+    },
+    {
+        "id": "9ddf16a193b81222",
+        "type": "ui-template",
+        "z": "2849d2c1ad85dd3d",
+        "group": "111770060baba897",
+        "page": "",
+        "ui": "",
+        "name": "Info Tapis à bande · moteur brushless",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "head": "",
+        "format": "<template><div class=\"sv-info\"><span><b>Tapis à bande · moteur brushless</b></span><span class=\"sv-tag\">OPC UA · 10.16.24.155:4840</span></div></template>\n<style>\n.sv-info{display:flex;justify-content:space-between;align-items:center;width:100%;font-size:13px;color:rgba(var(--v-theme-on-surface),.65)}\n.sv-info b{color:rgb(var(--v-theme-on-surface));font-weight:600}\n.sv-tag{font-family:monospace;font-size:12px;padding:2px 8px;border-radius:6px;background:rgba(var(--v-theme-on-surface),.07)}\n.sv-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:100%;height:100%;padding:6px 0}\n.sv-label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:rgba(var(--v-theme-on-surface),.6);font-weight:600;text-align:center}\n.sv-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.03em}\n.sv-pill.on{background:rgba(30,158,90,.14);color:#1e9e5a}\n.sv-pill.off{background:rgba(214,69,69,.14);color:#d64545}\n.sv-pill.na{background:rgba(120,120,120,.14);color:#8a8a8a}\n.sv-dot{width:10px;height:10px;border-radius:50%;background:currentColor}\n.sv-pill.on .sv-dot{box-shadow:0 0 0 4px rgba(30,158,90,.25)}\n.sv-var{font-family:monospace;font-size:11px;color:rgba(var(--v-theme-on-surface),.45)}\n.sv-convoyeur{border-top:4px solid #f08a00 !important}.sv-synchrone{border-top:4px solid #0b5cad !important}.sv-stepper{border-top:4px solid #7a4bd1 !important}</style>",
+        "storeOutMessages": false,
+        "passthru": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 990,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "801d67df9dd7d206",
+        "type": "ui-template",
+        "z": "2849d2c1ad85dd3d",
+        "group": "111770060baba897",
+        "page": "",
+        "ui": "",
+        "name": "Mise sous tension",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "head": "",
+        "format": "<template><div class=\"sv-badge\"><div class=\"sv-label\">Mise sous tension</div>\n<div :class=\"['sv-pill', known ? (isOn ? 'on' : 'off') : 'na']\"><span class=\"sv-dot\"></span>{{ known ? (isOn ? 'ALIMENTÉ' : 'HORS TENSION') : 'EN ATTENTE' }}</div>\n<div class=\"sv-var\">gMarcheConv</div></div></template>\n<script>\nexport default {\n  computed: {\n    known() { return !!this.msg && this.msg.payload !== undefined },\n    isOn() { const p = this.msg && this.msg.payload; return p === true || p === 1 || p === '1' || String(p).toLowerCase() === 'true' || String(p).toUpperCase() === 'ON' }\n  }\n}\n</script>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1130,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ead4a5927d5db8db",
+        "type": "ui-template",
+        "z": "2849d2c1ad85dd3d",
+        "group": "111770060baba897",
+        "page": "",
+        "ui": "",
+        "name": "Mouvement du tapis",
+        "order": 3,
+        "width": 2,
+        "height": 2,
+        "head": "",
+        "format": "<template><div class=\"sv-badge\"><div class=\"sv-label\">Mouvement du tapis</div>\n<div :class=\"['sv-pill', known ? (isOn ? 'on' : 'off') : 'na']\"><span class=\"sv-dot\"></span>{{ known ? (isOn ? 'EN MOUVEMENT' : 'ARRÊTÉ') : 'EN ATTENTE' }}</div>\n<div class=\"sv-var\">EnableConvey</div></div></template>\n<script>\nexport default {\n  computed: {\n    known() { return !!this.msg && this.msg.payload !== undefined },\n    isOn() { const p = this.msg && this.msg.payload; return p === true || p === 1 || p === '1' || String(p).toLowerCase() === 'true' || String(p).toUpperCase() === 'ON' }\n  }\n}\n</script>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1130,
+        "y": 84,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "813ed60bc8068d58",
+        "type": "ui-gauge",
+        "z": "2849d2c1ad85dd3d",
+        "name": "Vitesse de consigne",
+        "group": "111770060baba897",
+        "order": 4,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 2,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Vitesse de consigne",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#1e9e5a",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#f0a500",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "85",
+                "color": "#d64545",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 100,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1130,
+        "y": 128,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ec75cbacef21bc6",
+        "type": "ui-gauge",
+        "z": "2849d2c1ad85dd3d",
+        "name": "Vitesse du tapis",
+        "group": "111770060baba897",
+        "order": 5,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 2,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Vitesse du tapis",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "mm/s",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#1e9e5a",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "300",
+                "color": "#f0a500",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "425",
+                "color": "#d64545",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 500,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1130,
+        "y": 172,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b32f14a1d80d7a9",
+        "type": "ui-chart",
+        "z": "2849d2c1ad85dd3d",
+        "group": "111770060baba897",
+        "name": "Nombre de pièces",
+        "label": "Nombre de pièces",
+        "order": 6,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "pièces",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "20",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "false",
+        "pointRadius": 0,
+        "showLegend": false,
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 4,
+        "height": 6,
+        "className": "",
+        "interpolation": "monotoneX",
+        "x": 1130,
+        "y": 216,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a0e888c444e452e",
+        "type": "ui-template",
+        "z": "2849d2c1ad85dd3d",
+        "group": "5279f0cb60ea2737",
+        "page": "",
+        "ui": "",
+        "name": "Info Moteur synchrone · axe transtocker",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "head": "",
+        "format": "<template><div class=\"sv-info\"><span><b>Moteur synchrone · axe transtocker</b></span><span class=\"sv-tag\">OPC UA · 10.16.7.11:4840</span></div></template>\n<style>\n.sv-info{display:flex;justify-content:space-between;align-items:center;width:100%;font-size:13px;color:rgba(var(--v-theme-on-surface),.65)}\n.sv-info b{color:rgb(var(--v-theme-on-surface));font-weight:600}\n.sv-tag{font-family:monospace;font-size:12px;padding:2px 8px;border-radius:6px;background:rgba(var(--v-theme-on-surface),.07)}\n.sv-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:100%;height:100%;padding:6px 0}\n.sv-label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:rgba(var(--v-theme-on-surface),.6);font-weight:600;text-align:center}\n.sv-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.03em}\n.sv-pill.on{background:rgba(30,158,90,.14);color:#1e9e5a}\n.sv-pill.off{background:rgba(214,69,69,.14);color:#d64545}\n.sv-pill.na{background:rgba(120,120,120,.14);color:#8a8a8a}\n.sv-dot{width:10px;height:10px;border-radius:50%;background:currentColor}\n.sv-pill.on .sv-dot{box-shadow:0 0 0 4px rgba(30,158,90,.25)}\n.sv-var{font-family:monospace;font-size:11px;color:rgba(var(--v-theme-on-surface),.45)}\n</style>",
+        "storeOutMessages": false,
+        "passthru": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1000,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d6f52ae3955ad3d5",
+        "type": "ui-template",
+        "z": "2849d2c1ad85dd3d",
+        "group": "5279f0cb60ea2737",
+        "page": "",
+        "ui": "",
+        "name": "Mise sous tension",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "head": "",
+        "format": "<template><div class=\"sv-badge\"><div class=\"sv-label\">Mise sous tension</div>\n<div :class=\"['sv-pill', known ? (isOn ? 'on' : 'off') : 'na']\"><span class=\"sv-dot\"></span>{{ known ? (isOn ? 'ALIMENTÉ' : 'HORS TENSION') : 'EN ATTENTE' }}</div>\n<div class=\"sv-var\">BP_Power</div></div></template>\n<script>\nexport default {\n  computed: {\n    known() { return !!this.msg && this.msg.payload !== undefined },\n    isOn() { const p = this.msg && this.msg.payload; return p === true || p === 1 || p === '1' || String(p).toLowerCase() === 'true' || String(p).toUpperCase() === 'ON' }\n  }\n}\n</script>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1130,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e9081964678c2f03",
+        "type": "ui-template",
+        "z": "2849d2c1ad85dd3d",
+        "group": "5279f0cb60ea2737",
+        "page": "",
+        "ui": "",
+        "name": "État des modules",
+        "order": 3,
+        "width": 2,
+        "height": 2,
+        "head": "",
+        "format": "<template><div class=\"sv-badge\"><div class=\"sv-label\">État des modules</div>\n<div :class=\"['sv-pill', known ? (isOn ? 'on' : 'off') : 'na']\"><span class=\"sv-dot\"></span>{{ known ? (isOn ? 'PRÊT' : 'NON PRÊT') : 'EN ATTENTE' }}</div>\n<div class=\"sv-var\">ReadyToPowerOn</div></div></template>\n<script>\nexport default {\n  computed: {\n    known() { return !!this.msg && this.msg.payload !== undefined },\n    isOn() { const p = this.msg && this.msg.payload; return p === true || p === 1 || p === '1' || String(p).toLowerCase() === 'true' || String(p).toUpperCase() === 'ON' }\n  }\n}\n</script>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1130,
+        "y": 404,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "05dabead7f34ec12",
+        "type": "ui-gauge",
+        "z": "2849d2c1ad85dd3d",
+        "name": "Vitesse de consigne",
+        "group": "5279f0cb60ea2737",
+        "order": 4,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 4,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Vitesse de consigne",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "°/s",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#1e9e5a",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "240",
+                "color": "#f0a500",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "320",
+                "color": "#d64545",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 360,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1130,
+        "y": 448,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b89e00c7cd3281a2",
+        "type": "ui-chart",
+        "z": "2849d2c1ad85dd3d",
+        "group": "5279f0cb60ea2737",
+        "name": "Vitesse du moteur",
+        "label": "Vitesse du moteur",
+        "order": 5,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "°/s",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "false",
+        "pointRadius": 0,
+        "showLegend": false,
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad",
+            "#0b5cad"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 4,
+        "height": 6,
+        "className": "",
+        "interpolation": "monotoneX",
+        "x": 1130,
+        "y": 492,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "88ac76c6d6814dbd",
+        "type": "ui-template",
+        "z": "2849d2c1ad85dd3d",
+        "group": "df07c9cb216ca3ee",
+        "page": "",
+        "ui": "",
+        "name": "Info Moteur pas à pas · guide de tri",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "head": "",
+        "format": "<template><div class=\"sv-info\"><span><b>Moteur pas à pas · guide de tri</b></span><span class=\"sv-tag\">OPC UA · 10.16.7.13:4840</span></div></template>\n<style>\n.sv-info{display:flex;justify-content:space-between;align-items:center;width:100%;font-size:13px;color:rgba(var(--v-theme-on-surface),.65)}\n.sv-info b{color:rgb(var(--v-theme-on-surface));font-weight:600}\n.sv-tag{font-family:monospace;font-size:12px;padding:2px 8px;border-radius:6px;background:rgba(var(--v-theme-on-surface),.07)}\n.sv-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:100%;height:100%;padding:6px 0}\n.sv-label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:rgba(var(--v-theme-on-surface),.6);font-weight:600;text-align:center}\n.sv-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.03em}\n.sv-pill.on{background:rgba(30,158,90,.14);color:#1e9e5a}\n.sv-pill.off{background:rgba(214,69,69,.14);color:#d64545}\n.sv-pill.na{background:rgba(120,120,120,.14);color:#8a8a8a}\n.sv-dot{width:10px;height:10px;border-radius:50%;background:currentColor}\n.sv-pill.on .sv-dot{box-shadow:0 0 0 4px rgba(30,158,90,.25)}\n.sv-var{font-family:monospace;font-size:11px;color:rgba(var(--v-theme-on-surface),.45)}\n</style>",
+        "storeOutMessages": false,
+        "passthru": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 980,
+        "y": 1840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "477d9af3855effc7",
+        "type": "ui-template",
+        "z": "2849d2c1ad85dd3d",
+        "group": "df07c9cb216ca3ee",
+        "page": "",
+        "ui": "",
+        "name": "Mise sous tension",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "head": "",
+        "format": "<template><div class=\"sv-badge\"><div class=\"sv-label\">Mise sous tension</div>\n<div :class=\"['sv-pill', known ? (isOn ? 'on' : 'off') : 'na']\"><span class=\"sv-dot\"></span>{{ known ? (isOn ? 'ALIMENTÉ' : 'HORS TENSION') : 'EN ATTENTE' }}</div>\n<div class=\"sv-var\">BP_Power</div></div></template>\n<script>\nexport default {\n  computed: {\n    known() { return !!this.msg && this.msg.payload !== undefined },\n    isOn() { const p = this.msg && this.msg.payload; return p === true || p === 1 || p === '1' || String(p).toLowerCase() === 'true' || String(p).toUpperCase() === 'ON' }\n  }\n}\n</script>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1130,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c4cc37e198e3ad20",
+        "type": "ui-template",
+        "z": "2849d2c1ad85dd3d",
+        "group": "df07c9cb216ca3ee",
+        "page": "",
+        "ui": "",
+        "name": "État des modules",
+        "order": 3,
+        "width": 2,
+        "height": 2,
+        "head": "",
+        "format": "<template><div class=\"sv-badge\"><div class=\"sv-label\">État des modules</div>\n<div :class=\"['sv-pill', known ? (isOn ? 'on' : 'off') : 'na']\"><span class=\"sv-dot\"></span>{{ known ? (isOn ? 'PRÊT' : 'NON PRÊT') : 'EN ATTENTE' }}</div>\n<div class=\"sv-var\">ReadyToPowerOn</div></div></template>\n<script>\nexport default {\n  computed: {\n    known() { return !!this.msg && this.msg.payload !== undefined },\n    isOn() { const p = this.msg && this.msg.payload; return p === true || p === 1 || p === '1' || String(p).toLowerCase() === 'true' || String(p).toUpperCase() === 'ON' }\n  }\n}\n</script>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1130,
+        "y": 684,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0229b4532f655040",
+        "type": "ui-gauge",
+        "z": "2849d2c1ad85dd3d",
+        "name": "Vitesse de consigne",
+        "group": "df07c9cb216ca3ee",
+        "order": 4,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 4,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Vitesse de consigne",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "°/s",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#1e9e5a",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "240",
+                "color": "#f0a500",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "320",
+                "color": "#d64545",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 360,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1130,
+        "y": 728,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "5548fefb14a2fb31",
         "type": "ui-chart",
         "z": "2849d2c1ad85dd3d",
@@ -62,6 +1397,440 @@
         ]
     },
     {
+        "id": "0c625c46e626684e",
+        "type": "comment",
+        "z": "2849d2c1ad85dd3d",
+        "name": "Convoyeur — communication OPC UA (10.16.24.155:4840)",
+        "info": "1) Éditer les NodeId dans le nœud « Abonnements ». 2) Déployer. 3) Si besoin, recliquer sur l'inject pour réabonner.",
+        "x": 190,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "a610e8eef4ce53dd",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "name": "Abonner au démarrage",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 3,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "0a3cfe422b44b80e"
+            ]
+        ]
+    },
+    {
+        "id": "0a3cfe422b44b80e",
+        "type": "function",
+        "z": "2849d2c1ad85dd3d",
+        "name": "Abonnements Convoyeur",
+        "func": "// ============ CONFIGURATION — À ADAPTER ============\n// nom de variable : { id: NodeId complet, type: type OPC UA }\n// Types : Boolean (BOOL), Float (REAL), Double (LREAL), UInt32 (UDINT)\nconst VARS = {\n    \"gMarcheConv\": { id: \"ns=5;s=::AsGlobalPV:gMarcheConv\", type: \"Boolean\" },\n    \"EnableConvey\": { id: \"ns=5;s=::Program:EnableConvey\", type: \"Boolean\" },\n    \"SpeedPercent\": { id: \"ns=5;s=::Program:SpeedPercent\", type: \"Float\" },\n    \"VitesseMMS\": { id: \"ns=5;s=::Program:VitesseMMS\", type: \"Float\" },\n    \"CompteurPieces\": { id: \"ns=5;s=::Tcpt:CompteurPieces\", type: \"UInt32\" }\n};\n// ===================================================\nflow.set(\"opc_convoyeur\", VARS);\nconst msgs = Object.values(VARS).map(v => ({ topic: v.id + \";datatype=\" + v.type, payload: \"\" }));\nreturn [msgs];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "a2efa76663cb6b39"
+            ]
+        ]
+    },
+    {
+        "id": "a2efa76663cb6b39",
+        "type": "OpcUa-Client",
+        "z": "2849d2c1ad85dd3d",
+        "endpoint": "9657b19252ed544b",
+        "action": "subscribe",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "500",
+        "timeUnit": "ms",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "useTransport": false,
+        "maxChunkCount": "1",
+        "maxMessageSize": "8192",
+        "receiveBufferSize": "8192",
+        "sendBufferSize": "8192",
+        "setstatusandtime": false,
+        "keepsessionalive": false,
+        "name": "OPC UA Convoyeur",
+        "applicationName": "",
+        "applicationUri": "",
+        "x": 620,
+        "y": 80,
+        "wires": [
+            [
+                "58bf7f449f1526cd",
+                "a63c67aa0c7df7bf"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "58bf7f449f1526cd",
+        "type": "function",
+        "z": "2849d2c1ad85dd3d",
+        "name": "Routage Convoyeur",
+        "func": "const VARS = flow.get(\"opc_convoyeur\");\nif (!VARS) return null;\n// Ordre = ordre des sorties de ce nœud (1 sortie par variable)\nconst ORDER = [\"gMarcheConv\", \"EnableConvey\", \"SpeedPercent\", \"VitesseMMS\", \"CompteurPieces\"];\nconst LABELS = {\"gMarcheConv\": \"Mise sous tension\", \"EnableConvey\": \"Mouvement du tapis\", \"SpeedPercent\": \"Vitesse de consigne\", \"VitesseMMS\": \"Vitesse du tapis\", \"CompteurPieces\": \"Pièces\"};\nconst topic = String(msg.topic).split(\";datatype\")[0];\nconst name = Object.keys(VARS).find(k => VARS[k].id === topic);\nif (!name) return null;\nlet v = msg.payload;\nif (v && typeof v === \"object\" && \"value\" in v) v = v.value;\nif (typeof v === \"number\") v = Math.round(v * 100) / 100;\nconst out = new Array(ORDER.length).fill(null);\nconst i = ORDER.indexOf(name);\nif (i < 0) return null;\nout[i] = { payload: v, topic: LABELS[name] || name };\nreturn out;",
+        "outputs": 5,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 80,
+        "wires": [
+            [
+                "801d67df9dd7d206"
+            ],
+            [
+                "ead4a5927d5db8db"
+            ],
+            [
+                "813ed60bc8068d58"
+            ],
+            [
+                "1ec75cbacef21bc6"
+            ],
+            [
+                "2b32f14a1d80d7a9"
+            ]
+        ]
+    },
+    {
+        "id": "a63c67aa0c7df7bf",
+        "type": "debug",
+        "z": "2849d2c1ad85dd3d",
+        "name": "brut Convoyeur",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 860,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "3ec844ea1d46ee34",
+        "type": "comment",
+        "z": "2849d2c1ad85dd3d",
+        "name": "TPmSynchrone — communication OPC UA (10.16.7.11:4840)",
+        "info": "1) Éditer les NodeId dans le nœud « Abonnements ». 2) Déployer. 3) Si besoin, recliquer sur l'inject pour réabonner.",
+        "x": 190,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "439643740d4c6709",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "name": "Abonner au démarrage",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 3,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 400,
+        "wires": [
+            [
+                "04f8e4f990a602cd"
+            ]
+        ]
+    },
+    {
+        "id": "04f8e4f990a602cd",
+        "type": "function",
+        "z": "2849d2c1ad85dd3d",
+        "name": "Abonnements TPmSynchrone",
+        "func": "// ============ CONFIGURATION — À ADAPTER ============\n// nom de variable : { id: NodeId complet, type: type OPC UA }\n// Types : Boolean (BOOL), Float (REAL), Double (LREAL), UInt32 (UDINT)\nconst VARS = {\n    \"PowerOn\": { id: \"ns=6;s=::Program:MpAxisBasic_0.PowerOn\", type: \"Boolean\" },\n    \"ReadyToPowerOn\": { id: \"ns=6;s=::Program:MpAxisBasic_0.Info.ReadyToPowerOn\", type: \"Boolean\" },\n    \"AxisParameters.Velocity\": { id: \"ns=6;s=::Program:AxisParameters.Velocity\", type: \"Float\" },\n    \"MpAxisBasic_0.Velocity\": { id: \"ns=6;s=::Program:MpAxisBasic_0.Velocity\", type: \"Float\" }\n};\n// ===================================================\nflow.set(\"opc_synchrone\", VARS);\nconst msgs = Object.values(VARS).map(v => ({ topic: v.id + \";datatype=\" + v.type, payload: \"\" }));\nreturn [msgs];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 400,
+        "wires": [
+            [
+                "dcb70eb05fd676c7"
+            ]
+        ]
+    },
+    {
+        "id": "dcb70eb05fd676c7",
+        "type": "OpcUa-Client",
+        "z": "2849d2c1ad85dd3d",
+        "endpoint": "37bdac186bd6dde1",
+        "action": "subscribe",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "500",
+        "timeUnit": "ms",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "useTransport": false,
+        "maxChunkCount": "1",
+        "maxMessageSize": "8192",
+        "receiveBufferSize": "8192",
+        "sendBufferSize": "8192",
+        "setstatusandtime": false,
+        "keepsessionalive": false,
+        "name": "OPC UA TPmSynchrone",
+        "x": 620,
+        "y": 400,
+        "wires": [
+            [
+                "43df6383582f1799",
+                "0efdee71148a5d6a"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "43df6383582f1799",
+        "type": "function",
+        "z": "2849d2c1ad85dd3d",
+        "name": "Routage TPmSynchrone",
+        "func": "const VARS = flow.get(\"opc_synchrone\");\nif (!VARS) return null;\n// Ordre = ordre des sorties de ce nœud (1 sortie par variable)\nconst ORDER = [\"PowerOn\", \"ReadyToPowerOn\", \"AxisParameters.Velocity\", \"MpAxisBasic_0.Velocity\"];\nconst LABELS = {\"PowerOn\": \"Mise sous tension\", \"ReadyToPowerOn\": \"État des modules\", \"AxisParameters.Velocity\": \"Vitesse de consigne\", \"MpAxisBasic_0.Velocity\": \"Vitesse moteur\"};\nconst topic = String(msg.topic).split(\";datatype\")[0];\nconst name = Object.keys(VARS).find(k => VARS[k].id === topic);\nif (!name) return null;\nlet v = msg.payload;\nif (v && typeof v === \"object\" && \"value\" in v) v = v.value;\nif (typeof v === \"number\") v = Math.round(v * 100) / 100;\nconst out = new Array(ORDER.length).fill(null);\nconst i = ORDER.indexOf(name);\nif (i < 0) return null;\nout[i] = { payload: v, topic: LABELS[name] || name };\nreturn out;",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 400,
+        "wires": [
+            [
+                "d6f52ae3955ad3d5"
+            ],
+            [
+                "e9081964678c2f03"
+            ],
+            [
+                "05dabead7f34ec12"
+            ],
+            [
+                "b89e00c7cd3281a2"
+            ]
+        ]
+    },
+    {
+        "id": "0efdee71148a5d6a",
+        "type": "debug",
+        "z": "2849d2c1ad85dd3d",
+        "name": "brut TPmSynchrone",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 860,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f89d5296d7c2cec2",
+        "type": "comment",
+        "z": "2849d2c1ad85dd3d",
+        "name": "TPmSTEPPER — communication OPC UA (10.16.7.13:4840)",
+        "info": "1) Éditer les NodeId dans le nœud « Abonnements ». 2) Déployer. 3) Si besoin, recliquer sur l'inject pour réabonner.",
+        "x": 190,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "2789b4fa74ceaea9",
+        "type": "inject",
+        "z": "2849d2c1ad85dd3d",
+        "name": "Abonner au démarrage",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 3,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 680,
+        "wires": [
+            [
+                "5d20b81bcd65f78d"
+            ]
+        ]
+    },
+    {
+        "id": "5d20b81bcd65f78d",
+        "type": "function",
+        "z": "2849d2c1ad85dd3d",
+        "name": "Abonnements TPmSTEPPER",
+        "func": "// ============ CONFIGURATION — À ADAPTER ============\n// nom de variable : { id: NodeId complet, type: type OPC UA }\n// Types : Boolean (BOOL), Float (REAL), Double (LREAL), UInt32 (UDINT)\nconst VARS = {\n    \"BP_Power\": { id: \"ns=6;s=::Program:BP_Power\", type: \"Boolean\" },\n    \"ReadyToPowerOn\": { id: \"ns=6;s=::Program:MpAxisBasic_0.Info.ReadyToPowerOn\", type: \"Boolean\" },\n    \"AxisParameters.Velocity\": { id: \"ns=6;s=::Program:AxisParameters.Velocity\", type: \"Float\" },\n    \"MpAxisBasic_0.Position\": { id: \"ns=6;s=::Program:MpAxisBasic_0.Position\", type: \"Double\" }\n};\n// ===================================================\nflow.set(\"opc_stepper\", VARS);\nconst msgs = Object.values(VARS).map(v => ({ topic: v.id + \";datatype=\" + v.type, payload: \"\" }));\nreturn [msgs];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 680,
+        "wires": [
+            [
+                "59b90b7bc8e0be40"
+            ]
+        ]
+    },
+    {
+        "id": "59b90b7bc8e0be40",
+        "type": "OpcUa-Client",
+        "z": "2849d2c1ad85dd3d",
+        "endpoint": "c5c01ebc429e8051",
+        "action": "subscribe",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "500",
+        "timeUnit": "ms",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "useTransport": false,
+        "maxChunkCount": "1",
+        "maxMessageSize": "8192",
+        "receiveBufferSize": "8192",
+        "sendBufferSize": "8192",
+        "setstatusandtime": false,
+        "keepsessionalive": false,
+        "name": "OPC UA TPmSTEPPER",
+        "x": 620,
+        "y": 680,
+        "wires": [
+            [
+                "1acf3fa613998a01",
+                "7b80c0022986ab04"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1acf3fa613998a01",
+        "type": "function",
+        "z": "2849d2c1ad85dd3d",
+        "name": "Routage TPmSTEPPER",
+        "func": "const VARS = flow.get(\"opc_stepper\");\nif (!VARS) return null;\n// Ordre = ordre des sorties de ce nœud (1 sortie par variable)\nconst ORDER = [\"BP_Power\", \"ReadyToPowerOn\", \"AxisParameters.Velocity\", \"MpAxisBasic_0.Position\"];\nconst LABELS = {\"BP_Power\": \"Mise sous tension\", \"ReadyToPowerOn\": \"État des modules\", \"AxisParameters.Velocity\": \"Vitesse de consigne\", \"MpAxisBasic_0.Position\": \"Position\"};\nconst topic = String(msg.topic).split(\";datatype\")[0];\nconst name = Object.keys(VARS).find(k => VARS[k].id === topic);\nif (!name) return null;\nlet v = msg.payload;\nif (v && typeof v === \"object\" && \"value\" in v) v = v.value;\nif (typeof v === \"number\") v = Math.round(v * 100) / 100;\nconst out = new Array(ORDER.length).fill(null);\nconst i = ORDER.indexOf(name);\nif (i < 0) return null;\nout[i] = { payload: v, topic: LABELS[name] || name };\nreturn out;",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 680,
+        "wires": [
+            [
+                "477d9af3855effc7"
+            ],
+            [
+                "c4cc37e198e3ad20"
+            ],
+            [
+                "0229b4532f655040"
+            ],
+            [
+                "5548fefb14a2fb31"
+            ]
+        ]
+    },
+    {
+        "id": "7b80c0022986ab04",
+        "type": "debug",
+        "z": "2849d2c1ad85dd3d",
+        "name": "brut TPmSTEPPER",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 860,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "111770060baba897",
+        "type": "ui-group",
+        "name": "Convoyeur",
+        "page": "f43e8b7d2050f865",
+        "width": 4,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "sv-card sv-convoyeur",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "5279f0cb60ea2737",
+        "type": "ui-group",
+        "name": "TPmSynchrone",
+        "page": "f43e8b7d2050f865",
+        "width": 4,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "sv-card sv-synchrone",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default",
+        "tab": ""
+    },
+    {
         "id": "df07c9cb216ca3ee",
         "type": "ui-group",
         "name": "TPmSTEPPER",
@@ -75,6 +1844,42 @@
         "disabled": false,
         "groupType": "default",
         "tab": ""
+    },
+    {
+        "id": "9657b19252ed544b",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://10.16.24.155:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "37bdac186bd6dde1",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://10.16.7.11:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "c5c01ebc429e8051",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://10.16.7.13:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
     },
     {
         "id": "f43e8b7d2050f865",
@@ -147,11 +1952,12 @@
         }
     },
     {
-        "id": "9d2a14d01d3593b6",
+        "id": "73943a97a49b73c0",
         "type": "global-config",
         "env": [],
         "modules": {
-            "@flowfuse/node-red-dashboard": "1.33.0"
+            "@flowfuse/node-red-dashboard": "1.33.0",
+            "node-red-contrib-opcua": "0.2.355"
         }
     }
 ]
